@@ -31,7 +31,7 @@ let source; // A web audio source (could be mic), default is constant at 0.
 export const createAudioContext = async () => {
 
   const audioContext = new AudioContext();
-  await audioContext.audioWorklet.addModule('/WebAudio/ringbufferwebaudio/basic-processor.js');
+  await audioContext.audioWorklet.addModule('./ringbufferwebaudio/basic-processor.js');
   samplerate = audioContext.sampleRate;
   const myArrayBuffer = audioContext.createBuffer(
     1,
