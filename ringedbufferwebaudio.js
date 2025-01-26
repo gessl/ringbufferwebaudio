@@ -75,7 +75,7 @@ export const createAudioContext = async () => {
 
 
 // Create a WebWorker for Audio Processing.
-const worker = new Worker('/WebAudio/ringbufferwebaudio/worker.js', { type: 'module'});
+const worker = new Worker('./ringbufferwebaudio/worker.js', { type: 'module'});
 
 // Send FreeQueue instances and atomic state to worker.
 worker.postMessage({
